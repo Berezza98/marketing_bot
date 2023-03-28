@@ -6,6 +6,6 @@ module.exports = {
     instances: 1,
     exec_mode: "fork",
     log_file: "/home/sellmiss/logs/MARKETING_BOT.log",
-    interpreter: "/home/sellmiss/nodevenv/repositories/football_ua_post_bot/18/bin/node"
+    interpreter: "/home/sellmiss/nodevenv/repositories/marketing_bot/18/bin/node"
   }]
 }
