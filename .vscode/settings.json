@@ -1,0 +1,17 @@
+{
+  "sqltools.connections": [
+    {
+      "mysqlOptions": {
+        "authProtocol": "default"
+      },
+      "previewLimit": 50,
+      "server": "amazon-extension.com",
+      "port": 3306,
+      "driver": "MySQL",
+      "name": "Marketing DB",
+      "database": "sellmiss_marketing_bot",
+      "username": "sellmiss_marketing_bot_admin",
+      "password": "Omega678"
+    }
+  ]
+}
