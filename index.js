@@ -61,10 +61,12 @@ async function main() {
     await sequelize.authenticate();
     await sequelize.sync();
     console.log('Connection has been established successfully.');
-    bot.launch();
-    gracefullShotdown();
   } catch (error) {
     console.error('Start error: ', error);
+  } finally {
+    bot.launch();
+    gracefullShotdown();
+    console.log('Bot Launched!');
   }
 }
 
