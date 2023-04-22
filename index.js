@@ -61,9 +61,7 @@ async function main() {
     await sequelize.authenticate();
     await sequelize.sync();
     console.log('Connection has been established successfully.');
-  } catch (error) {
-    console.error('Start error: ', error);
-  } finally {
+
     const options = process.env.NODE_ENV === 'production'
     ? {
         webhook: {
@@ -72,9 +70,11 @@ async function main() {
         }
       } : {};
 
-    bot.launch(options);
+    await bot.launch(options)
     gracefullShotdown();
     console.log(process.env.NODE_ENV === 'production' ? 'Bot Launched in PROD mode!' : 'Bot Launched in DEV mode!');
+  } catch (error) {
+    console.error('Start error: ', error);
   }
 }
 
