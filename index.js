@@ -74,7 +74,7 @@ async function main() {
 
     bot.launch(options);
     gracefullShotdown();
-    console.log(process.env.NODE_ENV === 'Bot Launched in PROD mode!' ? '' : 'Bot Launched in DEV mode!');
+    console.log(process.env.NODE_ENV === 'production' ? 'Bot Launched in PROD mode!' : 'Bot Launched in DEV mode!');
   }
 }
 
