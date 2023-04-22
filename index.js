@@ -64,9 +64,17 @@ async function main() {
   } catch (error) {
     console.error('Start error: ', error);
   } finally {
-    bot.launch();
+    const options = process.env.NODE_ENV === 'production'
+    ? {
+        webhook: {
+          domain: 'https://marketing-bot.amazon-extension.com',
+          port: 443
+        }
+      } : {};
+
+    bot.launch(options);
     gracefullShotdown();
-    console.log('Bot Launched!');
+    console.log(process.env.NODE_ENV === 'Bot Launched in PROD mode!' ? '' : 'Bot Launched in DEV mode!');
   }
 }
 
