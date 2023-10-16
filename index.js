@@ -65,8 +65,8 @@ async function main() {
     const options = process.env.NODE_ENV === 'production'
     ? {
         webhook: {
-          domain: 'https://marketing-bot.amazon-extension.com',
-          port: 443
+          domain: 'marketing-bot.amazon-extension.com',
+          port: 80
         }
       } : {};
 
